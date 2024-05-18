@@ -43,6 +43,8 @@ img {
 }
 
 /* ------------------------------ Mi CSS ------------------------------ */
+
+/* .header */
 .header{
     background-image: url('../img/header_bg.svg');
     background-repeat: no-repeat;
@@ -52,7 +54,7 @@ img {
 }
     @media (min-width: 768px){ 
         .header{
-            background-size: 45rem;
+            background-size: 50rem;
         }
     }
     @media (min-width: 992px){ 
@@ -84,4 +86,73 @@ img {
         .header__logo{
             margin: 0;
         }
+        .header__grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            align-items: center;
+        }
     }
+
+.header__grid{
+
+}
+.header__texto{
+
+}
+.header__heading{
+    text-align: center;
+    font-size: 3rem;
+}
+@media (min-width: 768px){ 
+    .header__heading{
+        text-align: left;
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+}
+.header__boton{
+    background-color: var(--primario);
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px){ 
+    .header__boton{
+        display: inline-block;
+        padding: 1rem 3rem;
+    }
+}
+.header__grafico{
+
+}
+@media (min-width: 768px){ 
+    .header__imagen{
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+}
+
+/* .navegacion */
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px){ 
+    .navegacion{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+.navegacion__link{
+    color: var(--primario);
+}
+@media (min-width: 768px){ 
+    .navegacion__link{
+        color: var(--blanco);
+    }
+}
