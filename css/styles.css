@@ -36,10 +36,17 @@ img {
     max-width: 100%;
     display: block;
 }
+.mask{
+    overflow: hidden;
+}
 [class$="__contenedor"]{
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
+}
+[class$="__heading"]{
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
 /* ------------------------------ Mi CSS ------------------------------ */
@@ -89,15 +96,7 @@ img {
             align-items: center;
         }
     }
-
-.header__grid{
-
-}
-.header__texto{
-
-}
 .header__heading{
-    text-align: center;
     font-size: 3rem;
 }
 @media (min-width: 768px){ 
@@ -120,9 +119,6 @@ img {
         display: inline-block;
         padding: 1rem 3rem;
     }
-}
-.header__grafico{
-
 }
 @media (min-width: 768px){ 
     .header__imagen{
@@ -157,10 +153,6 @@ img {
 .nucleus{
     margin-top: 3rem;
 }
-.nucleus__heading{
-    text-align: center;
-    margin-bottom: 5rem;
-}
 .nucleus__grid{
     display: flex;
     flex-direction: column-reverse;
@@ -175,10 +167,8 @@ img {
 }
 
 /* .listado */
-.listado{
-
-}
 .listado__elemento{
+    background-color: var(--blanco);
     box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15); /* Horizontal Vertical Blur Spread Color*/
     padding: 2rem;
     margin-bottom: 5rem;
@@ -196,4 +186,32 @@ img {
 .listado__texto{
     margin: 0;
     font-size: 2rem;
+}
+
+/* .seguridad */
+.seguridad{
+    background-color: var(--primario);
+    padding: 10rem 0;
+    transform: rotate(3deg) scale(1.5);
+    margin: 40rem 0;
+}
+@media (min-width: 768px){ 
+    .seguridad{
+        margin: 30rem 0;
+    }
+}
+.seguridad__contenedor{
+    transform: rotate(-3deg) scale(.75);
+}
+.seguridad__heading{
+    color: var(--blanco);
+}
+
+@media (min-width: 768px){ 
+    .seguridad__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
 }
