@@ -171,6 +171,7 @@ img {
     padding: 2rem;
     margin-bottom: 5rem;
     cursor: pointer;
+    border-radius: .5rem;
     transition: scale .3s;
 }
 .listado__elemento:hover{
@@ -222,5 +223,50 @@ img {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5rem;
         align-items: center;
+    }
+}
+
+/* .comisiones */
+.listado__elemento--2col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.listado__heading--bigger{
+    font-size: 4rem;
+}
+.listado__texto--smaller{
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px){ 
+    .comisiones__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: flex-end;
+    }
+    .listado__elemento--2col{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 3rem;
+    }
+}
+@media (min-width: 920px){ 
+    .comisiones__grid{
+        align-items: center;
+    }
+}
+
+.comisiones__texto{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+@media (min-width: 768px){ 
+    .comisiones__texto{
+        text-align: left;
     }
 }
