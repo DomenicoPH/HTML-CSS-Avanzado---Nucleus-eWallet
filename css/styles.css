@@ -111,6 +111,14 @@ img {
     text-align: center;
     color: var(--blanco);
     margin-bottom: 4rem;
+    transition: all .3s ease;
+
+    &:hover{
+        border-radius: 5px;
+        scale: 1.1;
+        background-color: #562b8a;
+        
+    }
 }
 @media (min-width: 768px){ 
     .header__boton{
