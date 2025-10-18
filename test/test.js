@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // *** TEST ***
     let tl = gsap.timeline({
-        delay: 1,
+        //delay: 1,
         repeat: -1,
         yoyo: true,
     });
-    tl.to('.green', { duration: 1, rotation: -360 })
-      .to('.purple', { duration: 2, x: -100, ease: 'elastic.out' })
-      .to('.blue', { duration: 2, rotation: 360, x: 100, ease: 'expo.out' })
+    tl.to('.green', { duration: 1, rotation: -360 }, 1) // (elemento a animar, {propiedades y duración}, posición en timeline)
+      .to('.purple', { duration: 2, x: -100, ease: 'elastic.out' }, '-=0.75')
+      .to('.blue', { duration: 2, rotation: 360, x: 100, ease: 'expo.out' }, '+=1')
     // *** TEST ***
  
 });
