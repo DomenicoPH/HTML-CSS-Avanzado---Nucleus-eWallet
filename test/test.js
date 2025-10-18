@@ -27,9 +27,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         repeat: -1,
         yoyo: true,
     });
-    tl.to('.green', { duration: 1, rotation: -360 }, 1) // (elemento a animar, {propiedades y duración}, posición en timeline)
+    tl.addLabel('inicio')
+      .to('.green', { duration: 1, rotation: -360 }, 1) // (elemento a animar, {propiedades y duración}, posición en timeline)
+      .addLabel('medio')
       .to('.purple', { duration: 2, x: -100, ease: 'elastic.out' }, '-=0.75')
+      .addLabel('final')
       .to('.blue', { duration: 2, rotation: 360, x: 100, ease: 'expo.out' }, '+=1')
+      .to('.green', { duration: 5, rotation: 250 }, 'final')
     // *** TEST ***
  
 });
