@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.gradient-green{
+    background: radial-gradient(circle at left bottom, yellowgreen 0%, green 100%);
+}
+.gradient-purple{
+    background: radial-gradient(circle at left bottom, violet 0%, purple 100%);
+}
+.gradient-blue{
+    background: radial-gradient(circle at left bottom, skyblue 0%, blue 100%);
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 0 rgb(0, 0, 0, 0.2);
+}
