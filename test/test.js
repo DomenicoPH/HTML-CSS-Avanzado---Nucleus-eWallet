@@ -2,15 +2,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", (event) => {
  
-  // *** TEST ***
-  gsap.to('.green', {rotation: 350, x: 150, duration: 1});
-  gsap.to('.purple', {rotation: 350, x: 175, duration: 1.5});
-  gsap.to('.blue', {rotation: 350, x: 200, duration: 2});
+    // *** TEST ***
+    //gsap.to('.green', {rotation: 350, x: 150, duration: 1});
+    //gsap.to('.purple', {rotation: 350, x: 175, duration: 1.5});
+    //gsap.to('.blue', {rotation: 350, x: 200, duration: 2});
+    // *** TEST ***
+  
+  
+    // *** TEST ***
+    //gsap.to('.green', {rotation: 350, duration: 5, borderRadius: 50});
+    //gsap.to('.purple', {rotation: 350, duration: 5, borderRadius: 50});
+    //gsap.to('.blue', {rotation: 350, duration: 5, borderRadius: 50});
 
-  let tl = gsap.timeline();
-  tl.to('#green', {duration: 1, x: 786})
-    .to('#blue', {duration: 2, x: 786})
-    .to('#red', {duration: 3, x: 786})
-  // *** TEST ***
+    //let tl = gsap.timeline();
+    //tl.to('.green', {duration: 1, x: 345})
+    //  .to('.purple', {duration: 2, x: 345})
+    //  .to('.blue', {duration: 1, x: 345})
+    // *** TEST ***
+
+
+    // *** TEST ***
+    let tl = gsap.timeline({
+        delay: 1,
+        repeat: -1,
+        yoyo: true,
+    });
+    tl.to('.green', { duration: 1, rotation: -360 })
+      .to('.purple', { duration: 2, x: -100, ease: 'elastic.out' })
+      .to('.blue', { duration: 2, rotation: 360, x: 100, ease: 'expo.out' })
+    // *** TEST ***
  
 });
