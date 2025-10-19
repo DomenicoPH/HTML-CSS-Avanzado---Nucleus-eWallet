@@ -54,14 +54,51 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".header",
-      start: "center top",
+      start: "top top",
       end: "bottom+=100 top",
       scrub: true,
     }
   });
 
 
-  
+  // Animaciones main class='nucleus'
+  gsap.from('.nucleus__heading', {
+    y: 600,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.nucleus',
+      start: 'top-=200 bottom',
+      end: 'top top',
+      scrub: true,
+      markers: false,
+    }
+  })
+
+  gsap.from('.nucleus__imagen', {
+    y: 3000,
+    ease: 'power4.out',
+    scrollTrigger: {
+      trigger: '.nucleus',
+      start: 'top+=200 bottom',
+      end: 'top top',
+      scrub: true,
+      markers: false,
+    }
+  })
+
+  gsap.from('.listado__elemento', {
+    y: 500,
+    duration: 1,
+    stagger: .5,
+    ease: 'sine',
+    scrollTrigger: {
+      trigger: '.nucleus',
+      start: 'center bottom',
+      end: 'center top',
+      scrub: false,
+      markers: false,
+    }
+  })
 
 
 });

@@ -45,6 +45,7 @@ img {
 [class$="__heading"]{
     text-align: center;
     margin-bottom: 5rem;
+    color: var(--negro);
 }
 
 /* ------------------------------ Mi CSS ------------------------------ */
@@ -96,7 +97,6 @@ img {
     }
 .header__heading{
     font-size: 3rem;
-    color: var(--negro);
 }
 @media (min-width: 768px){ 
     .header__heading{
