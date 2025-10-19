@@ -1,7 +1,7 @@
 :root {
     --primario: #6834a6;
     --blanco: #FFF;
-    --negro: #000000;
+    --negro: #0F0F1E;;
     --fuentePrincipal: 'Poppins', sans-serif;
 }
 html {
@@ -69,7 +69,7 @@ img {
     }
     @media (min-width: 1280px){ 
         .header{
-            background-size: 80rem;
+            background-size: 90rem;
         }
     }
     
@@ -96,6 +96,7 @@ img {
     }
 .header__heading{
     font-size: 3rem;
+    color: var(--negro);
 }
 @media (min-width: 768px){ 
     .header__heading{
