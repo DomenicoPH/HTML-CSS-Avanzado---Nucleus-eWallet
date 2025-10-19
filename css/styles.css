@@ -149,6 +149,11 @@ img {
 }
 .navegacion__link{
     color: var(--primario);
+    transition: text-shadow .3s ease;
+
+    &:hover{
+        text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
+    }
 }
 @media (min-width: 768px){ 
     .navegacion__link{
