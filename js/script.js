@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Animaciones Header (al cargar la página...)
 
   // logo izq. header
-  gsap.fromTo('.header__logo, .header__texto', {
+  gsap.fromTo('.header__logo', {
     opacity: 0,
-    scale: 0.8,
+    scale: 0.9,
     //x: -200
   },{
     //x: 0,
@@ -17,9 +17,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ease: 'sine'
   })
 
+  // header__heading word
+  gsap.from('.word',{
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power2.out',
+  })
+
+  // header__boton
+  gsap.fromTo('.header__boton',
+    {
+      opacity: 0,
+      y: 100,
+    },{
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: 'power4.out'
+    })
+
   // navegacion__link
   gsap.from('.navegacion__link', {
-    y: -100,
+    y: -1000,
     ease: 'sine',
     delay: .5,
     duration: .8,

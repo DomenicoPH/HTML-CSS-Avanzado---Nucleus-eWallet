@@ -15,6 +15,7 @@ body {
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
     line-height: 1.8;
+    overflow-x: hidden;
 }
 h1, h2, h3 {
     font-weight: 900;
@@ -112,7 +113,7 @@ img {
     text-align: center;
     color: var(--blanco);
     margin-bottom: 4rem;
-    transition: all .3s ease;
+    transition: border-radius .3s ease, scale .3s ease, background-color .3s ease;
 
     &:hover{
         border-radius: 5px;
