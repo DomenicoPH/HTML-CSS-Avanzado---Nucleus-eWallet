@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   })
 
-  gsap.from('.listado__elemento', {
+  gsap.from('#listado-elemento-anim', {
     y: 500,
     duration: 1,
     stagger: .5,
