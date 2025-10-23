@@ -84,42 +84,61 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Animaciones main class='nucleus'
   gsap.from('.nucleus__heading', {
-    y: 600,
+    opacity:0,
+    duration:1.5,
     ease: 'power2.out',
     scrollTrigger: {
       trigger: '.nucleus',
-      start: 'top-=200 bottom',
+      start: 'top bottom-=200',
       end: 'top top',
-      scrub: true,
+      scrub: false,
       markers: false,
     }
   })
 
-  gsap.from('.nucleus__imagen', {
-    y: 3000,
-    ease: 'power4.out',
+  gsap.fromTo('.nucleus__imagen', {
+    y:1000,
+    rotateZ:0,
+  },{
+    y:0,
+    rotateZ:-3,
+    duration:2,
+    ease: 'elastic.out(1,0.7)',
     scrollTrigger: {
       trigger: '.nucleus',
       start: 'top+=200 bottom',
       end: 'top top',
-      scrub: true,
+      scrub: false,
       markers: false,
     }
   })
 
   gsap.from('#listado-elemento-anim', {
     y: 500,
-    duration: 1,
+    rotate:-10,
+    duration: .7,
     stagger: .5,
-    ease: 'sine',
+    ease: 'back.out(1.2,1)',
     scrollTrigger: {
       trigger: '.nucleus',
-      start: 'center bottom',
-      end: 'center top',
+      start: 'top center',
+      end: 'center center',
       scrub: false,
       markers: false,
     }
   })
 
+  // Animaciones sección: Seguridad
+  gsap.from('.seguridad', {
+    y:900,
+    ease: 'back.out(1.2,1)',
+    duration:.8,
+    scrollTrigger: {
+      trigger:'.seguridad',
+      start:'top-=700 bottom',
+      end:'top-=700 center',
+      markers:true
+    }
+  })
 
 });

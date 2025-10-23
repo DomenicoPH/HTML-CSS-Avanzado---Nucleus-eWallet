@@ -182,7 +182,7 @@ img {
 /* .listado */
 .listado__elemento{
     background-color: var(--blanco);
-    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15); /* Horizontal Vertical Blur Spread Color*/
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .1); /* Horizontal Vertical Blur Spread Color*/
     padding: 2rem;
     margin-bottom: 5rem;
     cursor: pointer;
@@ -209,7 +209,9 @@ img {
     position: relative;
     margin: 10rem 0;
     overflow: hidden;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 }
+    /*
     .seguridad::before,
     .seguridad::after{
         background-color: var(--blanco);
@@ -228,6 +230,7 @@ img {
         left: -5rem;
         transform: rotate(3deg);
     }
+        */
 .seguridad__heading{
     color: var(--blanco);
 }
