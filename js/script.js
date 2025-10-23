@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.seguridad',
       start:'top-=600 center',
       end:'top-=600 center',
-      markers: false
+      markers:false
     }
   })
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.comisiones',
       start:'top bottom-=300',
       end:'top bottom-=300',
-      markers:true,
+      markers:false,
     }
   })
 
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.comisiones',
       start:'top center',
       end:'top center',
-      markers:true,
+      markers:false,
     }
   })
 
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.comisiones',
       start:'top top+=200',
       end:'top top+=200',
-      markers:true
+      markers:false
     }
   })
 
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.comisiones',
       start:'top top+=100',
       end:'top top+=100',
-      markers:true
+      markers:false
     }
   })
 
