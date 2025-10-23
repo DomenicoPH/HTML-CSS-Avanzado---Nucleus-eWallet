@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //x: 0,
     scale: 1,
     opacity: 1,
-    duration: 1,
+    duration: 2,
     ease: 'sine'
   })
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from('.word',{
     opacity: 0,
     y: 20,
-    duration: 1,
+    duration: 2,
     stagger: 0.2,
     ease: 'power2.out',
   })
@@ -40,10 +40,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // navegacion__link
   gsap.from('.navegacion__link', {
-    y: -1000,
+    opacity:0,
+    y: -100,
     ease: 'sine',
     delay: .5,
-    duration: .8,
+    duration: 1,
     stagger: .2
   })
 
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Animaciones main class='nucleus'
   gsap.from('.nucleus__heading', {
     opacity:0,
-    duration:1.5,
+    duration:2,
     ease: 'power2.out',
     scrollTrigger: {
       trigger: '.nucleus',
@@ -113,10 +114,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   })
 
-  gsap.from('#listado-elemento-anim', {
+  gsap.from('#listado-elemento-nucleus', {
     y: 500,
     rotate:-10,
-    duration: .7,
+    duration: 2,
     stagger: .5,
     ease: 'back.out(1.2,1)',
     scrollTrigger: {
@@ -137,6 +138,79 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:'.seguridad',
       start:'top-=700 bottom',
       end:'top-=700 center',
+      markers:false
+    }
+  })
+
+  gsap.from('.seguridad__heading', {
+    opacity:0,
+    duration:2,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.seguridad',
+      start: 'top bottom+=400',
+      end: 'top top',
+      scrub: false,
+      markers: false,
+    }
+  })
+
+  gsap.from('#listado-elemento-seguridad',{
+    opacity:0,
+    duration: 2,
+    stagger: .5,
+    scrollTrigger: {
+      trigger:'.seguridad',
+      start:'top-=600 center',
+      end:'top-=600 center',
+      markers: false
+    }
+  })
+
+  // Animaciones para sección: Comisiones
+  gsap.from('.comisiones__heading',{
+    opacity:0,
+    duration:2,
+    scrollTrigger: {
+      trigger:'.comisiones',
+      start:'top bottom-=300',
+      end:'top bottom-=300',
+      markers:true,
+    }
+  })
+
+  gsap.from('.comisiones__imagen',{
+    x:1000,
+    duration:1,
+    ease:'back.out(1,1)',
+    scrollTrigger: {
+      trigger:'.comisiones',
+      start:'top center',
+      end:'top center',
+      markers:true,
+    }
+  })
+
+  gsap.from('.comisiones__texto',{
+    opacity:0,
+    duration: 2,
+    stagger: .8,
+    scrollTrigger: {
+      trigger:'.comisiones',
+      start:'top top+=200',
+      end:'top top+=200',
+      markers:true
+    }
+  })
+
+  gsap.from('#listado-elemento-comisiones',{
+    opacity:0,
+    duration: 2,
+    stagger: .8,
+    scrollTrigger: {
+      trigger:'.comisiones',
+      start:'top top+=100',
+      end:'top top+=100',
       markers:true
     }
   })
