@@ -99,15 +99,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.fromTo('.nucleus__imagen', {
     y:1000,
-    rotateZ:0,
   },{
     y:0,
-    rotateZ:-3,
     duration:2,
     ease: 'elastic.out(1,0.7)',
     scrollTrigger: {
       trigger: '.nucleus',
-      start: 'top+=200 bottom',
+      start: 'top+=600 bottom',
       end: 'top top',
       scrub: false,
       markers: false,
@@ -117,7 +115,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from('#listado-elemento-nucleus', {
     y: 500,
     rotate:-10,
-    duration: 2,
+    duration: 1.5,
     stagger: .5,
     ease: 'back.out(1.2,1)',
     scrollTrigger: {
@@ -157,7 +155,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from('#listado-elemento-seguridad',{
     opacity:0,
-    duration: 2,
+    duration: 1.5,
     stagger: .5,
     scrollTrigger: {
       trigger:'.seguridad',
@@ -193,8 +191,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from('.comisiones__texto',{
     opacity:0,
-    duration: 2,
-    stagger: .8,
+    duration: 3,
     scrollTrigger: {
       trigger:'.comisiones',
       start:'top top+=200',
@@ -205,8 +202,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from('#listado-elemento-comisiones',{
     opacity:0,
-    duration: 2,
+    duration: 1.5,
     stagger: .8,
+    delay:1,
     scrollTrigger: {
       trigger:'.comisiones',
       start:'top top+=100',
