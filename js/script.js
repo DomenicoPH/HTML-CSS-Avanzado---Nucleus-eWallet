@@ -193,14 +193,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.from('.comisiones__texto',{
     opacity:0,
-    duration: 3,
+    duration: 2,
     scrollTrigger: scrollTriggerComisionesTexto
   })
 
   gsap.from('#listado-elemento-comisiones',{
     opacity:0,
     duration: 1.5,
-    stagger: .8,
+    stagger: .5,
     delay:1,
     scrollTrigger: scrollTriggerComisionesTexto
   })
