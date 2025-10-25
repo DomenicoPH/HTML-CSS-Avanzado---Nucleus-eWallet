@@ -3,6 +3,7 @@
     --blanco: #FFF;
     --negro: #0F0F1E;;
     --fuentePrincipal: 'Poppins', sans-serif;
+    --fuenteSecundaria: "Zalando Sans SemiExpanded", sans-serif;
 }
 html {
     font-size: 62.5%;
@@ -47,6 +48,11 @@ img {
     text-align: center;
     margin-bottom: 5rem;
     color: var(--negro);
+}
+
+.heavy{
+    font-family: var(--fuenteSecundaria);
+    font-weight: 900;
 }
 
 /* ------------------------------ Mi CSS ------------------------------ */
@@ -191,6 +197,11 @@ img {
 }
 .listado__elemento:hover{
     scale: 1.025;
+}
+.listado__elemento--seguridad{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 .listado__heading{
     font-size: 3rem;
