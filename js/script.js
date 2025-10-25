@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
   // navegacion__link
-  gsap.from('.navegacion__link', {
+  gsap.from('#nav-header', {
     opacity:0,
     y: -100,
     ease: 'sine',
@@ -177,27 +177,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   })
 
+    const scrollTriggerComisionesTexto = {
+      trigger:'.comisiones',
+      start:'top top+=300',
+      end:'top top+=300',
+      markers:false
+    }
+
   gsap.from('.comisiones__imagen',{
     x:1000,
     duration:1,
     ease:'back.out(1,1)',
-    scrollTrigger: {
-      trigger:'.comisiones',
-      start:'top center',
-      end:'top center',
-      markers:false,
-    }
+    scrollTrigger: scrollTriggerComisionesTexto
   })
 
   gsap.from('.comisiones__texto',{
     opacity:0,
     duration: 3,
-    scrollTrigger: {
-      trigger:'.comisiones',
-      start:'top top+=200',
-      end:'top top+=200',
-      markers:false
-    }
+    scrollTrigger: scrollTriggerComisionesTexto
   })
 
   gsap.from('#listado-elemento-comisiones',{
@@ -205,12 +202,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     duration: 1.5,
     stagger: .8,
     delay:1,
-    scrollTrigger: {
-      trigger:'.comisiones',
-      start:'top top+=100',
-      end:'top top+=100',
-      markers:false
+    scrollTrigger: scrollTriggerComisionesTexto
+  })
+
+  // Animaciones para sección: Testimoniales
+
+    const scrollTriggerTestimoniales = {
+      trigger:'.testimoniales',
+      start:'top bottom-=300',
+      end:'top bottom-=300',
+      markers:false,
     }
+
+  gsap.from('.testimoniales__heading', {
+    opacity:0,
+    duration:2,
+    scrollTrigger: scrollTriggerTestimoniales
+  })
+
+  gsap.from('.testimoniales__grid div', {
+    opacity:0,
+    y:10,
+    duration:1,
+    stagger: 0.4,
+    scrollTrigger: scrollTriggerTestimoniales 
   })
 
 });
